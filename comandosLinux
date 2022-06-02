@@ -220,4 +220,5 @@
   109  hostname
   110  help | more
   111  uname -a
-  112  history >> /home/aluno/aulaSo/comandosUsados.txt
+  112  history >> /home/aluno/aulaSo/comandosUsados.txt[
+  find / -iname *arquivo*ou arquivo*
