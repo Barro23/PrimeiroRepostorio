@@ -1,0 +1,223 @@
+1  sudot-get update
+    2  sudo apt-get install virtualbox
+    3  wget https://download.virtualbox.org/virtualbox/5.2.22/VirtualBox-5.2.22-126460-Linux_x86.run -O virtualbox.run
+    4  get https://download.virtualbox.org/virtualbox/6.1.34/VirtualBox-6.1.34-150636-Linux_amd64.run -O virtualbox.run
+    5  chmod +x virtualbox.run
+    6  sudo apt-get update
+    7  sudo apt-get install virtualbox
+    8  wget https://download.virtualbox.org/virtualbox/6.1.34/VirtualBox-6.1.34-150636-Linux_amd64.run -O virtualbox.run
+    9  chmod +x virtualbox.run
+   10  sudo ./virtualbox.run
+   11  sudo apt install wireshark
+   12  sudo apt install default-jdk
+   13  apt-get update
+   14  sudo apt-get update
+   15  apt-get install default-jre
+   16  sudo apt-get install default-jre
+   17  sudo apt update
+   18  sudo apt install wireshark
+   19  sudo apt install wireshark-3.6.5.tar.xz
+   20  sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+   21  sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list
+   22  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+   23  sudo apt-get update
+   24  sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+   25  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+   26  sudo apt-get update
+   27  sudo apt-get -y install postgresql
+   28  apt-get install postgresql-12 
+   29  y
+   30  sudo apt-get install postgresql
+   31  sudo add-apt-repository ppa:wireshark-dev/stable
+   32  sudo apt-get update
+   33  sudo apt-get install wireshark
+   34  pwd
+   35  ls /
+   36  ls-la
+   37  ls -la
+   38  ls/
+   39  ls /
+   40  ls /home
+   41  ls /home/aluno
+   42  cd /home/aluno
+   43  pwd
+   44  cd /home/aluno/Desktop/
+   45  cd ..
+   46  pwd
+   47  c ..
+   48  c ../..
+   49  cd /home/aluno
+   50  mkdir /home/aluno/aulaSo
+   51  ls
+   52  ls -la /home/aluno/
+   53  touch /home/aluno/aulaSo/teste0.txt
+   54  touch /home/aluno/aulaSo/teste1.txt
+   55  touch /home/aluno/aulaSo/teste2.txt
+   56  touch /home/aluno/aulaSo/teste3.txt
+   57  mkdir ./aulaSo
+   58  ls
+   59  cd aulaSo/
+   60  pwd
+   61  ls
+   62  mkdir /home/aluno/aulaSo/diretorioVazio
+   63  ls
+   64  cd diretorioVazio/
+   65  cd ..
+   66  cp /home/aluno/aulaSo/teste0.txt /home/aluno/aulaSo/diretorioVazio/
+   67  cp /home/aluno/aulaSo/teste1.txt /home/aluno/aulaSo/diretorioVazio/
+   68  cp /home/aluno/aulaSo/teste2.txt /home/aluno/aulaSo/diretorioVazio/
+   69  cp /home/aluno/aulaSo/teste3.txt /home/aluno/aulaSo/diretorioVazio/
+   70  ls
+   71  cd diretorioVazio/
+   72  ls
+   73  cd ..
+   74  man cd
+   75  man cp
+   76  rm -i /home/aluno/aulaSo/diretorioVazio/teste0.txt
+   77  rm -i /home/aluno/aulaSo/diretorioVazio/teste1.txt
+   78  rm -i /home/aluno/aulaSo/diretorioVazio/teste2.txt
+   79  ls
+   80  cd diretorioVazio/
+   81  ls
+   82  rm -f /home/aluno/aulaSo/diretorioVazio/teste3.txt
+   83  ls
+   84  mv /home/aluno/aulaSo/teste0.txt /home/aluno/aulaSo/diretorioVazio/
+   85  ls
+   86  cd ..
+   87  clear
+   88  histoty
+   89  history
+   90  pico /home/aluno/aulaSo/teste0.txt
+   91  more /home/aluno/aulaSo/teste0.txt
+   92  pico /home/aluno/aulaSo/teste1.txt
+   93  more /home/aluno/aulaSo/teste1.txt
+   94  echo /home/aluno/aulaSo/teste1.txt /home/aluno/aulaSo/teste3.txt
+   95  more /home/aluno/aulaSo/teste3.txt
+   96  echo /home/aluno/aulaSo/teste1.txt /home/aluno/aulaSo/teste3.txt/
+   97  echo 'quinta feira' /home/aluno/aulaSo/teste1.txt
+   98  echo quinta feira >> /home/aluno/aulaSo/teste3.txt
+   99  more /home/aluno/aulaSo/teste3.txt
+  100  pico /home/aluno/aulaSo/teste3.txt
+  101  echo boa noite > /home/aluno/aulaSo/teste3.txt
+  102  more /home/aluno/aulaSo/teste3.txt
+  103  apt-get update
+  104  sudo apt-get update
+  105  sudo apt-get upgrade
+  106  hostename
+  107  hostname
+  108  sudo hostname aluno004
+  109  hostname
+  110  help | more
+  111  uname -a
+  112  history >> /home/aluno/aulaSo/comandosUsados.txt apt-get update
+    2  sudo apt-get install virtualbox
+    3  wget https://download.virtualbox.org/virtualbox/5.2.22/VirtualBox-5.2.22-126460-Linux_x86.run -O virtualbox.run
+    4  get https://download.virtualbox.org/virtualbox/6.1.34/VirtualBox-6.1.34-150636-Linux_amd64.run -O virtualbox.run
+    5  chmod +x virtualbox.run
+    6  sudo apt-get update
+    7  sudo apt-get install virtualbox
+    8  wget https://download.virtualbox.org/virtualbox/6.1.34/VirtualBox-6.1.34-150636-Linux_amd64.run -O virtualbox.run
+    9  chmod +x virtualbox.run
+   10  sudo ./virtualbox.run
+   11  sudo apt install wireshark
+   12  sudo apt install default-jdk
+   13  apt-get update
+   14  sudo apt-get update
+   15  apt-get install default-jre
+   16  sudo apt-get install default-jre
+   17  sudo apt update
+   18  sudo apt install wireshark
+   19  sudo apt install wireshark-3.6.5.tar.xz
+   20  sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+   21  sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list
+   22  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+   23  sudo apt-get update
+   24  sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
+   25  wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
+   26  sudo apt-get update
+   27  sudo apt-get -y install postgresql
+   28  apt-get install postgresql-12 
+   29  y
+   30  sudo apt-get install postgresql
+   31  sudo add-apt-repository ppa:wireshark-dev/stable
+   32  sudo apt-get update
+   33  sudo apt-get install wireshark
+   34  pwd
+   35  ls /
+   36  ls-la
+   37  ls -la
+   38  ls/
+   39  ls /
+   40  ls /home
+   41  ls /home/aluno
+   42  cd /home/aluno
+   43  pwd
+   44  cd /home/aluno/Desktop/
+   45  cd ..
+   46  pwd
+   47  c ..
+   48  c ../..
+   49  cd /home/aluno
+   50  mkdir /home/aluno/aulaSo
+   51  ls
+   52  ls -la /home/aluno/
+   53  touch /home/aluno/aulaSo/teste0.txt
+   54  touch /home/aluno/aulaSo/teste1.txt
+   55  touch /home/aluno/aulaSo/teste2.txt
+   56  touch /home/aluno/aulaSo/teste3.txt
+   57  mkdir ./aulaSo
+   58  ls
+   59  cd aulaSo/
+   60  pwd
+   61  ls
+   62  mkdir /home/aluno/aulaSo/diretorioVazio
+   63  ls
+   64  cd diretorioVazio/
+   65  cd ..
+   66  cp /home/aluno/aulaSo/teste0.txt /home/aluno/aulaSo/diretorioVazio/
+   67  cp /home/aluno/aulaSo/teste1.txt /home/aluno/aulaSo/diretorioVazio/
+   68  cp /home/aluno/aulaSo/teste2.txt /home/aluno/aulaSo/diretorioVazio/
+   69  cp /home/aluno/aulaSo/teste3.txt /home/aluno/aulaSo/diretorioVazio/
+   70  ls
+   71  cd diretorioVazio/
+   72  ls
+   73  cd ..
+   74  man cd
+   75  man cp
+   76  rm -i /home/aluno/aulaSo/diretorioVazio/teste0.txt
+   77  rm -i /home/aluno/aulaSo/diretorioVazio/teste1.txt
+   78  rm -i /home/aluno/aulaSo/diretorioVazio/teste2.txt
+   79  ls
+   80  cd diretorioVazio/
+   81  ls
+   82  rm -f /home/aluno/aulaSo/diretorioVazio/teste3.txt
+   83  ls
+   84  mv /home/aluno/aulaSo/teste0.txt /home/aluno/aulaSo/diretorioVazio/
+   85  ls
+   86  cd ..
+   87  clear
+   88  histoty
+   89  history
+   90  pico /home/aluno/aulaSo/teste0.txt
+   91  more /home/aluno/aulaSo/teste0.txt
+   92  pico /home/aluno/aulaSo/teste1.txt
+   93  more /home/aluno/aulaSo/teste1.txt
+   94  echo /home/aluno/aulaSo/teste1.txt /home/aluno/aulaSo/teste3.txt
+   95  more /home/aluno/aulaSo/teste3.txt
+   96  echo /home/aluno/aulaSo/teste1.txt /home/aluno/aulaSo/teste3.txt/
+   97  echo 'quinta feira' /home/aluno/aulaSo/teste1.txt
+   98  echo quinta feira >> /home/aluno/aulaSo/teste3.txt
+   99  more /home/aluno/aulaSo/teste3.txt
+  100  pico /home/aluno/aulaSo/teste3.txt
+  101  echo boa noite > /home/aluno/aulaSo/teste3.txt
+  102  more /home/aluno/aulaSo/teste3.txt
+  103  apt-get update
+  104  sudo apt-get update
+  105  sudo apt-get upgrade
+  106  hostename
+  107  hostname
+  108  sudo hostname aluno004
+  109  hostname
+  110  help | more
+  111  uname -a
+  112  history >> /home/aluno/aulaSo/comandosUsados.txt
