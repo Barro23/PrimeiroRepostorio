@@ -1,0 +1,645 @@
+//exemplo 1/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package aula13;
+
+/**
+ *
+ * @author pb948
+ */
+public class BuscaMaiorMenor {
+    private int n1;
+    private int n2;
+    private int n3;
+    private int n4;
+    private int n5;
+    private int maior;
+    private int menor;
+
+    public BuscaMaiorMenor(int n1, int n2, int n3, int n4, int n5) {
+        this.n1 = n1;
+        this.n2 = n2;
+        this.n3 = n3;
+        this.n4 = n4;
+        this.n5 = n5;
+        
+    }
+
+    public int getN1() {
+        return n1;
+    }
+
+    public void setN1(int n1) {
+        this.n1 = n1;
+    }
+
+    public int getN2() {
+        return n2;
+    }
+
+    public void setN2(int n2) {
+        this.n2 = n2;
+    }
+
+    public int getN3() {
+        return n3;
+    }
+
+    public void setN3(int n3) {
+        this.n3 = n3;
+    }
+
+    public int getN4() {
+        return n4;
+    }
+
+    public void setN4(int n4) {
+        this.n4 = n4;
+    }
+
+    public int getN5() {
+        return n5;
+    }
+
+    public void setN5(int n5) {
+        this.n5 = n5;
+    }
+
+    public void setMaior() {
+        maior = n1;
+        if(n1 > maior){
+           maior = n1;
+        }if(n2 > maior){
+            maior = n2;
+        }if(n3 > maior){
+            maior = n3;
+        }if(n4 > maior){
+            maior = n4;
+        }if(n5 > maior){
+            maior = n5;
+        
+        }
+        
+    }
+
+    public void setMenor() {
+        menor = n1;
+        if(n1 < menor){
+           menor = n1;
+        }if(n2 < menor){
+           menor = n2;
+        }if(n3 < menor){
+           menor = n3;
+        }if(n4 < menor){
+           menor = n4;
+        }if(n5 < menor){
+           menor = n5;
+        }
+        
+       
+    }
+
+    public int getMaior() {
+        return maior;
+    }
+
+    public int getMenor() {
+        return menor;
+    }
+    
+
+    @Override
+    public String toString() {
+        return "BuscaMaiorMenor{" + "maior valor = " + this.maior + ", menor valor = " + this.menor + '}';
+    }
+    
+    
+    
+    //main
+
+
+    /*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package aula13;
+
+/**
+ *
+ * @author pb948
+ */
+public class BuscaMaiorMenorTeste {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        BuscaMaiorMenor bmm = new BuscaMaiorMenor(1, 2, 3, 4, 5);
+            bmm.setMaior();
+            bmm.setMenor();
+            System.out.println(bmm.toString());
+    }
+    
+}
+
+    
+    
+}
+
+
+  //exemplo2
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package aula13;
+
+/**
+ *
+ * @author pb948
+ */
+public abstract class CartaoWeb {
+    String destinatario;
+    
+    public abstract String retornarMensagem(String remetente);
+
+    public String getDestinatario() {
+        return destinatario;
+    }
+
+    public void setDestinatario(String destinatario) {
+        this.destinatario = destinatario;
+    }
+    
+    
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package aula13;
+/**
+ *
+ * @author pb948
+ */
+public class DiaDosNamorados extends CartaoWeb {
+
+    public DiaDosNamorados(String destinatario) {
+        this.destinatario = destinatario;
+    }
+    
+    @Override
+    public String retornarMensagem(String remetente){
+        return "Querida " + destinatario + ",\n" +
+               "Feliz Dia dos Namorados!\n" +
+               "Espero que esse tenha sido o único cartão do dia dos namorados que\n" +
+               "tenha ganhado nessa data!\n" +
+               "De todo meu coração, " + remetente;
+    }
+    
+   
+}
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package aula13;
+
+/**
+ *
+ * @author pb948
+ */
+public class Natal extends CartaoWeb{
+
+    public Natal(String destinatario) {
+        this.destinatario = destinatario;
+    }
+    @Override
+    public String retornarMensagem(String remetente){
+        return "Querida " + destinatario + ",\n" +
+               "Feliz Natal!\n" +
+               "Espero que esteja bem\n" +
+               "tenha um otimo natal!\n" +
+               "De todo meu coração, " + remetente;
+    }
+    
+    
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package aula13;
+/**
+ *
+ * @author pb948
+ */
+public class Aniversario extends CartaoWeb {
+
+    public Aniversario(String destinatario) {
+        this.destinatario = destinatario;
+    }
+    
+    @Override
+    public String retornarMensagem(String remetente){
+        return destinatario + ",\n" +
+               "Feliz aniversario!\n" +
+               "Espero que seja muito felz na sua vida\n" +
+               "tenho muita consderação por ti!\n" +
+               "De todo meu coração, " + remetente;
+    }
+    
+}
+
+    //main
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package aula13;
+
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author pb948
+ */
+public class TesteCartaoWeb {
+    public static void main(String[] args) {
+       DiaDosNamorados p1 = new DiaDosNamorados("Giulia");
+       Natal p2 = new Natal("Juriscleide");
+       Aniversario p3 = new Aniversario("Carlos");
+       
+        ArrayList<CartaoWeb> teste = new ArrayList<>();
+        teste.add(p1);
+        teste.add(p2);
+        teste.add(p3);
+        
+        for(int i = 0; i < teste.size(); i++ ){
+            System.out.println(teste.get(i).retornarMensagem("Pedro"));
+        }
+    }
+}
+
+  //exemplo 3
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package aula13;
+
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author pb948
+ */
+public class TesteCartaoWeb {
+    public static void main(String[] args) {
+       DiaDosNamorados p1 = new DiaDosNamorados("Giulia");
+       Natal p2 = new Natal("Juriscleide");
+       Aniversario p3 = new Aniversario("Carlos");
+       
+        ArrayList<CartaoWeb> teste = new ArrayList<>();
+        teste.add(p1);
+        teste.add(p2);
+        teste.add(p3);
+        
+        for(int i = 0; i < teste.size(); i++ ){
+            System.out.println(teste.get(i).retornarMensagem("Pedro"));
+        }
+    }
+}
+ 
+//main
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package aula10;
+
+/**
+ *
+ * @author pb948
+ */
+public class ClienteTeste {
+    public static void main(String[] args){
+        Cliente cl = new Cliente(21);
+            System.out.println("nome: " + cl.getNome());
+            cl.setNome("Gustavo");
+            System.out.println("nome: " + cl.getNome());
+        Cliente cl1 = new Cliente(30);
+            System.out.println("nome: " + cl1.getNome());
+            cl1.setNome("Gurtavo");
+            System.out.println("nome: " + cl1.getNome());
+    }
+}
+
+//exemplo4
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package aula10;
+
+/**
+ *
+ * @author pb948
+ */
+public class Data {
+    private int mes;
+    private int dia;
+    private int ano;
+    
+    public Data(int dia, int mes, int ano){
+        this.dia = dia;
+        this.mes = mes;
+        this.ano = ano;
+    }
+    
+    public int getMes() {
+        return this.mes;
+    }
+
+    public int getDia() {
+        return this.dia;
+    }
+
+    public int getAno() {
+        return this.ano;
+    }
+
+    public void setMes(int mes) {
+        this.mes = mes;
+    }
+
+    public void setDia(int dia) {
+        this.dia = dia;
+    }
+
+    public void setAno(int ano) {
+        this.ano = ano;
+    }
+    
+    public void displayData(){
+        System.out.println(dia + "/" + mes + "/" + ano );
+    }
+    
+}
+
+  //main
+
+
+package aula10;
+
+/**
+ *
+ * @author pb948
+ */
+public class DataTeste {
+    public static void main(String[] args){
+        Data dt = new Data(1, 2, 3);
+            dt.displayData();
+    
+    }
+}
+
+
+//exemlo5
+
+package aula.pkg9;
+import java.util.Scanner;
+
+public class Conta {
+    Scanner in = new Scanner(System.in);
+    double saldo;
+    double saldoFinal;
+    String tipo = "corrente";
+    
+    public Conta(double valorInicial){
+        this.saldo = valorInicial;
+    }
+    public Conta(double valorInicial, String tipo){
+        this.saldo = valorInicial;
+        this.tipo = tipo;
+   }
+    public boolean depositar(double valor){
+        this.saldo = valor + saldo;
+        if("corrente".equals(tipo)){
+            if(valor > 1000){System.out.println("voce nao pode depositar valores acima de 1.000,00");}
+        }else if("poupaca".equals(tipo)){
+            return valor > 0;
+        } 
+        return true;
+   }
+    double sacar(double valor){
+        if(valor > saldo){
+            System.out.println("não é possivel fazer esse saque");
+        }
+        this.saldoFinal = saldo - valor;
+        return valor;
+    }
+    void consultarSaldo(Conta tipoConta){
+        System.out.println(saldoFinal);
+    }
+
+    void consultarSaldo(String corente) {
+        System.out.println("saldo final da sua conta;");
+        System.out.println(saldoFinal);
+    }
+}
+   //main
+
+package aula.pkg9;
+
+/**
+ *
+ * @author pb948
+ */
+public class ConsultaConta {
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Conta c1 = new Conta(10000);
+            c1.depositar(100);
+            c1.sacar(50);
+            c1.consultarSaldo("corrente");
+            
+    }
+    
+    
+    
+}
+
+  //exemplo 6
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package aulaanimal;
+
+/**
+ *
+ * @author pb948
+ */
+public class Animal {
+    protected String nome;
+    protected String comprimento;
+    protected String nunPatas;
+    protected String cor;
+    protected String ambiente;
+    protected String velocidade;
+
+    public Animal(String nome, String comprimento, String nunPatas, String cor, String ambiente, String velocidade) {
+        this.nome = nome;
+        this.comprimento = comprimento;
+        this.nunPatas = nunPatas;
+        this.cor = cor;
+        this.ambiente = ambiente;
+        this.velocidade = velocidade;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getComprimento() {
+        return comprimento;
+    }
+
+    public void setComprimento(String comprimento) {
+        this.comprimento = comprimento;
+    }
+
+    public String getNunPatas() {
+        return nunPatas;
+    }
+
+    public void setNunPatas(String nunPatas) {
+        this.nunPatas = nunPatas;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public void setCor(String cor) {
+        this.cor = cor;
+    }
+
+    public String getAmbiente() {
+        return ambiente;
+    }
+
+    public void setAmbiente(String ambiente) {
+        this.ambiente = ambiente;
+    }
+
+    public String getVelocidade() {
+        return velocidade;
+    }
+
+    public void setVelocidade(String velocidade) {
+        this.velocidade = velocidade;
+    }
+
+    @Override
+    public String toString() {
+        return " Animal: " + nome + 
+               "\n comprimento: " + comprimento + 
+               "\n nunPatas: " + nunPatas + 
+               "\n cor: " + cor + 
+               "\n ambiente: " + ambiente + 
+               "\n velocidade: " + velocidade;
+    }
+    
+    
+}
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package aulaanimal;
+
+/**
+ *
+ * @author pb948
+ */
+public class Mamifero {
+    String alimento;
+
+    public Mamifero(String alimento) {
+        this.alimento = alimento;
+    }
+    
+}
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package aulaanimal;
+
+/**
+ *
+ * @author pb948
+ */
+public class Peixe {
+    String caracteristicas;
+
+    public Peixe(String caracteristicas) {
+        this.caracteristicas = caracteristicas;
+    }
+    
+}
+  //main 
+
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package aulaanimal;
+
+/**
+ *
+ * @author pb948
+ */
+public class TesteAnimal {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Animal tub  = new Animal("Tubarao","300 cm", "0", "cinzenta", "mar", "1.5 m/s");
+        Peixe peixe = new Peixe("Barbatanas e cauda");
+            System.out.println(tub);
+            System.out.println(" caracteristicas: " + peixe.caracteristicas);
+          
+        System.out.println("");    
+         
+        Animal urso  = new Animal("urso-do-canada","180 cm", "4", "vermelho", "terra", "0.5 m/s");
+        Mamifero mamifero = new Mamifero("Barbatanas e cauda");
+            System.out.println(urso);
+            System.out.println(" Alimento: " + mamifero.alimento);
+    }
+    
+}
+
+
+
+
+
