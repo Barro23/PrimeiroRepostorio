@@ -99,4 +99,49 @@ values(ddddddd);
 
 drop aaaaa cascade ou on tabela
 
+CREATE TRIGGER tg_Funcionario_Insert
+ON Funcionario FOR AFTER INSERT
+AS
+INSERT INTO FuncionarioLog(FunCPF,
+Comando, Usuario, Data) VALUES (cpf,
+‘INSERT’, CURRENT_USER(),
+CURRENT_DATE());
+abs(x) – valor absoluto
+• ceil(x) – menor inteiro maior ou igual ao argumento
+• floor(x) - maior inteiro menor ou igual ao argumento
+• cos(x) - coseno
+• sin(x) – seno
+• log(x) – logaritmo de x na base 10
+• mod(x,y) – resto inteiro da divisão de x por y
+• pow(x,y) - eleva o numero x à potência y
+• random() – retorna um número aleatório entre 0 1 e 1 0
+• round(x [,y]) - arredonda para a precisão informada
+• sqrt(x) – raiz quadrada
 
+SELECT log(53);
+◼SELECT sin(30), pow(2,5);
+◼SELECT random(),random(),random();
+
+◼SELECT current_database();
+◼SELECT version();
+◼SELECT current_setting('datestyle');
+
+CREATE SEQUENCE minha_seq
+INCREMENT BY 2
+MINVALUE 100
+MAXVALUE 110
+CYCLE;
+DROP SEQUENCE minha_seq;
+ALTER SEQUENCE minha_seq
+INCREMENT BY 1;
+
+
+CREATE OR REPLACE VIEW
+empregados_projetoX (nome, endereco,
+salario) AS
+SELECT f.pnome, f.endereco, f.salario
+FROM funcionario as f JOIN
+trabalha_em as t ON f.cpf = t.fcpf
+JOIN projeto as p ON t.projnumero =
+p.projnumero
+WHERE p.projnome = “Produto X”
