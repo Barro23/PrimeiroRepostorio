@@ -1,0 +1,102 @@
+CREATE SCHEMA EXERCICIO;
+SHOW search_path;
+SET search_path TO EXERCICIO;
+
+
+primary key(numpedido, codigoproduto),
+	foreign key (numpedido) references Pedido(numpedido),
+	foreign key (codigoproduto) references Produto(codigoproduto)
+
+CREATE TABLE EX2_CLIENTE(
+ codcliente int,
+ nome varchar(60),
+ datanascimento date,
+ cpf varchar(11),
+ CONSTRAINT pk2_EX2_cliente PRIMARY KEY (codcliente)
+);
+INSERT INTO EX2_CLIENTE VALUES (1, 'Sylvio Barbon', TO_DATE('05/12/1984', 'DD/MM/YYYY'),
+'12315541212');
+
+
+CREATE SEQUENCE EX2_LOG_SEQ
+ START WITH 1
+ INCREMENT BY 1
+ MAXVALUE 99999
+ MINVALUE 1
+ CACHE 20
+ ;
+
+
+CREATE OR REPLACE FUNCTION ABAIXAR_ESTOQUE()
+RETURNS TRIGGER AS
+$$
+BEGIN
+ 	IF (new.numeroitem > old.numeroitem) then
+		new.quantidade = old.quantidade;
+	END IF;
+	RETURN NEW;
+END
+$$
+ LANGUAGE 'plpgsql';
+
+ 
+CREATE TRIGGER "abaixar_EST"
+AFTER INSERT ON EX2_PRODUTO
+FOR EACH ROW 
+EXECUTE PROCEDURE
+ABAIXAR_ESTOQUE();
+
+update EX2_PRODUTO
+set quantidade = 9
+where descricao = 'Mouse'
+
+SELECT * FROM EX2_PRODUTO;
+
+CREATE OR REPLACE FUNCTION retornar_cod(varchar(30))
+RETURNS integer AS
+$$
+
+		 select codigoproduto from produto
+         WHERE descricaoproduto like CONCAT('%', $1, '%');
+
+	
+$$
+ LANGUAGE sql;
+ 
+ select * from retornar_cod('Qu');
+
+
+CREATE OR REPLACE FUNCTION registros(integer, character(3), varchar(30), real )
+RETURNS setof void AS
+$$
+
+		 insert into produto(codigoproduto , unidade , descricaoproduto , precounitario) values ( $1, $2, $3, $4)
+        
+         
+
+$$
+ LANGUAGE sql;
+ 
+select registros(304, 'Kg ', 'carne', 5.17 );
+select * from produto;
+
+CREATE VIEW alunos_maiornota
+(mat_aluno, nome_aluno, media) AS
+SELECT mat_aluno, nome_aluno, MAX(media) FROM aluno;
+
+CREATE TRIGGER "aaaaa"
+AFTER INSERT(pode ser delete ou update tambem) ON bbbbbbbbbbbbb
+FOR EACH ROW 
+EXECUTE PROCEDURE
+ccccccc();
+
+
+
+create rule aaaaa
+as on insert to bbbbbb
+do insert into ccc
+values(ddddddd);
+
+drop aaaaa cascade ou on tabela
+
+
